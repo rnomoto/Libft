@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((65 <= c && c <= 90) || (97 <= c && c <= 122))
 		return (1);
@@ -18,13 +18,13 @@ int	ft_isalpha(char c)
 		return (0);
 }
 
-//#include <stdio.h>
-//
-// int main(int argc, char **argv)
-//{
-//	(void) argc;
-//	int i;
-//	i = ft_isalpha(*argv[1]);
-//	printf("%d\n", i);
-//	return (0);
-//}
+#include <stdio.h>
+
+int main(void)
+{
+	int i, result = 0;
+	scanf("%d", &i);
+	result = ft_isalpha(i);
+	printf("%d\n", result);
+	return (0);
+}
