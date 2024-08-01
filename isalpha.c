@@ -28,3 +28,5 @@ int main(void)
 	printf("%d\n", result);
 	return (0);
 }
+
+//入力が66の時は正しいが、'a'の時に正しい出力にならない。
