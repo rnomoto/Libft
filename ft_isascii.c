@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:38:26 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/05/01 14:43:26 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/02 15:51:40 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (0 <= c && c <= 127)
 		return (1);
@@ -18,13 +18,17 @@ int	ft_isascii(char c)
 		return (0);
 }
 
-//#include <stdio.h>
-//
-// int main(int argc, char **argv)
-//{
-//	(void)argc;
-//	int i;
-//	i = ft_isascii(*argv[1]);
-//	printf("%d\n", i);
-//	return (0);
-//}
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	int i = 40;
+// 	int j = '(';
+// 	int result1, result2 = 0;
+// 	result1 = ft_isascii(i);
+// 	printf("input: %d, output: %d\n", i, result1);
+// 	result2 = ft_isascii(j);
+// 	printf("input: %c, output: %d\n", j, result2);
+
+// 	return (0);
+// }
