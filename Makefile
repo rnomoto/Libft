@@ -2,7 +2,7 @@ NAME = libft.a
 SRCS = ${wildcard libft_git/*.c}
 OBJS = $(SRCS:.c=.o)
 CC = gcc
-CLFAG = -Wall -Wextra -Werror
+CFLAG = -Wall -Wextra -Werror
 
 $(NAME):$(OBJS)
 	ar rc $(NAME) $(OBJS)
