@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 09:57:47 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/06 16:33:53 by rnomoto          ###   ########.fr       */
+/*   Created: 2024/08/06 16:32:32 by ryosuke           #+#    #+#             */
+/*   Updated: 2024/08/06 17:03:53 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int ft_toupper(int c)
 {
-	if (48 <= c && c <= 57)
-		return (1);
-	else
-		return (0);
+    if ('a' <= c && c <= 'z')
+    {
+        c -= 'a' - 'A';
+    }
+    return c;
 }
 
 // #include <stdio.h>
 
 // int main(void)
 // {
-// 	int result1, result2 = 0;
-// 	int i = 46;
-// 	char j = '0';
-// 	result1 = ft_isdigit(i);
-// 	result2 = ft_isdigit(j);
-// 	printf("input: %d, output: %d\n", i, result1);
-// 	printf("input: %c, output: %d\n", j, result2);
-// 	return (0);
+//     int i = 97;
+//     char j = 'a';
+//     int k = 65;
+//     int l = '0';
+
+//     printf("input: %d, output: %d\n", i, ft_toupper(i));
+//     printf("input: '%c', output: %c\n", j, ft_toupper(j));
+//     printf("input: %d, output: %d\n", k, ft_toupper(k));
+//     printf("input: '%c', output: %c\n", l, ft_toupper(l));
+
+//     return 0;
 // }
