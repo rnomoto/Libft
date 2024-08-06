@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if ('A' <= c && c <= 'Z')
-    {
-        c += 'a' - 'A';
-    }
-    return c;
+	if ('A' <= c && c <= 'Z')
+	{
+		c += 'a' - 'A';
+	}
+	return (c);
 }
 
 // #include <stdio.h>
@@ -33,5 +33,5 @@ int ft_tolower(int c)
 //     printf("input: %d, output: %d\n", k, ft_tolower(k));
 //     printf("input: '%c', output: %c\n", l, ft_tolower(l));
 
-//     return 0;
+//     return (0);
 // }

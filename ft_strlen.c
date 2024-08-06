@@ -12,12 +12,13 @@
 
 #include <stddef.h>
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	size_t index = 0;
+	size_t	index;
 
+	index = 0;
 	if (str == NULL)
-		return 0;
+		return (0);
 	else
 	{
 		while (str[index] != '\0')

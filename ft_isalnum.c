@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if (('0' <= c && c <= '9') || (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z')))
-        return 1;
-    else
-        return 0;
+	if (('0' <= c && c <= '9') || (('A' <= c && c <= 'Z') || ('a' <= c
+				&& c <= 'z')))
+		return (1);
+	else
+		return (0);
 }
 
 // #include <stdio.h>
@@ -37,5 +38,5 @@ int ft_isalnum(int c)
 //     result4 = ft_isalnum(l);
 //     printf("input: %c, output: %d\n", l, result4);
 
-//     return 0;
+//     return (0);
 // }

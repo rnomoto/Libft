@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if ('a' <= c && c <= 'z')
-    {
-        c -= 'a' - 'A';
-    }
-    return c;
+	if ('a' <= c && c <= 'z')
+	{
+		c -= 'a' - 'A';
+	}
+	return (c);
 }
 
 // #include <stdio.h>
@@ -33,5 +33,5 @@ int ft_toupper(int c)
 //     printf("input: %d, output: %d\n", k, ft_toupper(k));
 //     printf("input: '%c', output: %c\n", l, ft_toupper(l));
 
-//     return 0;
+//     return (0);
 // }
