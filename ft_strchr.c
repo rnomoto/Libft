@@ -12,17 +12,17 @@
 
 #include <stddef.h>
 
-char *ft_strchr(const char* s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s)
-    {
-        if (*s == c)
-        {
-           return (char *)s;
-        }
-        s++;
-    }
-    return NULL;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			return ((char *)s);
+		}
+		s++;
+	}
+	return (NULL);
 }
 
 // #include <stdio.h>
@@ -36,5 +36,5 @@ char *ft_strchr(const char* s, int c)
 //     printf("input: %c, output: %s\n", i, ft_strchr(input, i));
 //     printf("input: %c, output: %s\n", j, ft_strchr(input, j));
 
-//     return 0;
+//     return (0);
 // }
