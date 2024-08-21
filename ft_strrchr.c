@@ -6,11 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 11:36:46 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/08 11:59:24 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:04:03 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	word_count(const char *s, int c)
 {
@@ -44,8 +44,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
