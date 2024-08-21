@@ -6,11 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 09:58:36 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/06 18:20:14 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:08:59 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -26,8 +26,6 @@ size_t	ft_strlen(const char *str)
 		return (index);
 	}
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
