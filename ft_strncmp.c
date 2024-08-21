@@ -6,11 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:02:55 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/09 09:42:21 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:09:24 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
