@@ -6,9 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:48:05 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/06 16:34:06 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:07:24 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -17,8 +19,6 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
