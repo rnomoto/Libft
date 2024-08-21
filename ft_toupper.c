@@ -6,9 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 16:32:32 by ryosuke           #+#    #+#             */
-/*   Updated: 2024/08/06 17:03:53 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:04:54 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -18,8 +20,6 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
