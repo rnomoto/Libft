@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:29:58 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 14:23:46 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 14:33:53 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     int i = 0;
     size_t result = 0;
 
+    result = ft_strlen(src);
+    
     while (src[i] != '\0' && size > 1)
     {
         dst[i] = src[i];
@@ -40,7 +42,6 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     }
     dst[i] = '\0';
 
-    result = ft_strlen(src);
     return result;
 }
 
