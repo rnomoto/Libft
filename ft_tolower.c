@@ -6,9 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 17:04:35 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/06 17:07:10 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:03:46 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -18,8 +20,6 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
