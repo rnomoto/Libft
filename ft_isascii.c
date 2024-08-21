@@ -6,9 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:38:26 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/02 15:51:40 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:06:42 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -17,8 +19,6 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
