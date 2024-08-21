@@ -6,9 +6,11 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:15:15 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/06 16:33:38 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/21 13:06:15 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -17,8 +19,6 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
