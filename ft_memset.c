@@ -1,45 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:00:04 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/05/06 16:18:51 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/22 22:25:46 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	char			*str;
-	unsigned char	tmp;
+	size_t			index;
+	unsigned char	*str_cast;
 
-	tmp = c;
-	str = s;
-	while (0 < n)
+	index = 0;
+	str_cast = (unsigned char *)str;
+	while (index < n)
 	{
-		str[n - 1] = tmp;
-		n--;
+		str_cast[index] = c;
+		index++;
 	}
-	return (str);
+	return (str_cast);
 }
 
-//#include <stdio.h>
-//#include <stdlib.h>
-//
-//int	main(int argc, char **argv)
-//{
-//	char	*result;
-//
-//	if (argc != 4)
-//	{
-//		printf("Error\n");
-//		return (1);
-//	}
-//	result = ft_memset(argv[1], atoi(argv[2]), atoi(argv[3]));
-//	printf("%s\n", result);
-//	return (0);
-//}
+// int main(void)
+// {
+// 	char *str = (char *)malloc(20 * sizeof(char));
+// 	int c = 'a';
+// 	size_t n = 5;
+
+// 	ft_memset(str, c, n);
+
+// 	printf("%s\n", str);
+
+// 	return (0);
+// }
