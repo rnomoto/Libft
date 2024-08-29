@@ -6,69 +6,47 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:36:00 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 21:27:15 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/29 19:41:58 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	index;
-
-	index = 0;
-	if (str == NULL)
-		return (0);
-	else
-	{
-		while (str[index] != '\0')
-			index++;
-		return (index);
-	}
-}
-
-char	*ft_strncat(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (i + j < size - 1)
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	dst[i + j] = '\0';
-	return (dst);
-}
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	dst_len;
+	size_t	dest_len;
 	size_t	src_len;
+	size_t	i;
 
-	dst_len = ft_strlen(dst);
+	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	ft_strncat(dst, src, size);
-	if (dst_len >= size)
-		return (size + dst_len);
+	i = 0;
+	if (size <= dest_len)
+		return (src_len + size);
 	else
-		return (dst_len + src_len);
+	{
+		while (dest[i] != '\0')
+			i++;
+		while (i + 1 < size && *src)
+		{
+			dest[i] = *src;
+			i++;
+			src++;
+		}
+		dest[i] = '\0';
+	}
+	return (dest_len + src_len);
 }
 
 // int main(void)
 // {
-//     char dst[100] = "42Tokyo.";
-//     const char *src = "Hello World!";
-//     size_t result = 0;
+//     char dst[] = "pqrstuvwxyz";
+//     const char *src = "abcd";
 
 //     printf("dst: %s\n", dst);
 //     printf("src: %s\n", src);
 
-//     result = ft_strlcat(dst, src, 25);
+//     size_t result = ft_strlcat(dst, src, 20);
 //     printf("dst_cat: %s output: %zu\n", dst, result);
 
 //     return (0);
