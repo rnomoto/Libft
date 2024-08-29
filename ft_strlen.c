@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 09:58:36 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 13:08:59 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/08/29 19:52:05 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@ size_t	ft_strlen(const char *str)
 	size_t	index;
 
 	index = 0;
-	if (str == NULL)
-		return (0);
-	else
-	{
-		while (str[index] != '\0')
-			index++;
-		return (index);
-	}
+	while (str[index] != '\0')
+		index++;
+	return (index);
 }
 
 // int main(void)
