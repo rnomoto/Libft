@@ -6,51 +6,36 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 11:36:46 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 13:04:03 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/01 11:20:19 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word_count(const char *s, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	int	count;
+	char	c_cast;
+	char	*result;
 
-	count = 0;
-	while (*s)
+	result = NULL;
+	c_cast = (char)c;
+	while (*str)
 	{
-		if (*s == c)
-			count++;
-		s++;
+		if (*str == c_cast)
+			result = (char *)str;
+		str++;
 	}
-	return (count);
-}
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int	num;
-
-	num = word_count(s, c);
-	if (num != 0)
-	{
-		while (*s)
-		{
-			if (*s == c && num == 1)
-				return ((char *)s);
-			else if (*s == c && num != 1)
-				num--;
-			s++;
-		}
-	}
-	return (NULL);
+	if (c_cast == '\0')
+		return ((char *)str);
+	return (result);
 }
 
 // int main(void)
 // {
-//     char *input = "Hello World!";
-//     char i = 'r';
-//     char j = 'l';
-//     char k = 'a';
+//     char *input = "123456789";
+//     char i = 'a';
+//     char j = 'b';
+//     char k = '\0';
 
 //     printf("input: %c, output: %s\n", i, ft_strrchr(input, i));
 //     printf("input: %c, output: %s\n", j, ft_strrchr(input, j));
