@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:26:10 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 13:20:59 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/07 11:42:05 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	s2_len;
 
-	i = 0;
-	j = 0;
-	if (s1 == NULL)
+	s2_len = ft_strlen(s2);
+	if (s2_len == 0)
 		return ((char *)s1);
-	while (s1[i + j] != '\0' && len > 0)
+	while (*s1 && s2_len <= len)
 	{
-		j = 0;
-		while (s1[i + j] == s2[j] && s2[j] != '\0')
-		{
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
+		if (*s1 == *s2 && ft_strncmp(s1, s2, s2_len) == 0)
+			return ((char *)s1);
+		s1++;
 		len--;
 	}
 	return (NULL);
@@ -39,11 +32,14 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 // int main(void)
 // {
 //     const char *tmp1 = "Hello World!";
-//     const char *tmp2 = "42Tokyo";
-//     const char *to_find = "lo";
+//     const char *tmp2 = "";
+//     const char *to_find = "";
 
-//     printf("input: %s, search: %s, output: %s\n", tmp1, to_find, ft_strnstr(tmp1, to_find, 10));
-	//     printf("input: %s, search: %s, output: %s\n", tmp2, to_find, ft_strnstr(tmp2, to_find, 7));
+// 	char *result1 = ft_strnstr(tmp1, tmp1, 20);
+//     printf("input: %s, search: %s, output: %s\n", tmp1, tmp1, result1);
 
-	//     return (0);
-	// }
+// 	char *result2 = ft_strnstr(tmp2, to_find, 7);
+//     printf("input: %s, search: %s, output: %s\n", tmp2, to_find, result2);
+
+//     return (0);
+// }
