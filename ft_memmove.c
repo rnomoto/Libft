@@ -6,13 +6,13 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:12:31 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 14:14:58 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/14 14:35:37 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memrcpy(char *dest, char *src, size_t len)
+void	*ft_memrcpy(unsigned char *dest, unsigned char *src, size_t len)
 {
 	while (len > 0)
 	{
@@ -24,11 +24,11 @@ void	*ft_memrcpy(char *dest, char *src, size_t len)
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char	*dest_cast;
-	char	*src_cast;
+	unsigned char	*dest_cast;
+	unsigned char	*src_cast;
 
-	dest_cast = (char *)dest;
-	src_cast = (char *)src;
+	dest_cast = (unsigned char *)dest;
+	src_cast = (unsigned char *)src;
 	if (dest == NULL && src == NULL)
 		return (dest);
 	if (dest > src && dest < src + len)
