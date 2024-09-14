@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 20:18:26 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 21:53:51 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/14 22:36:16 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*tmp;
 
 	index = 0;
-	if (s == NULL)
-		return (NULL);
-	tmp = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
+	if (s == NULL || ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	tmp = (char *)ft_calloc(sizeof(char), len + 1);
 	if (tmp == NULL)
 		return (NULL);
-	while (index < len && s[index + start] != '\0')
+	while (index < len && s[start + index] != '\0')
 	{
-		tmp[index] = s[index + start];
+		tmp[index] = s[start + index];
 		index++;
 	}
-	tmp[index] = '\0';
 	return (tmp);
 }
 
