@@ -6,46 +6,49 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:12:31 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/09 13:59:59 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/14 14:14:58 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memrcpy(void *dest, const void *src)
+void	*ft_memrcpy(char *dest, char *src, size_t len)
 {
-	size_t				index;
-	unsigned char		*dest_cast;
-	const unsigned char	*src_cast = (const unsigned char *)src;
-
-    index = ft_strlen(src);
-	dest_cast = (unsigned char *)dest;
-	if (dest == NULL && src == NULL)
-		return (dest);
-	while (index >= 0)
+	while (len > 0)
 	{
-		dest_cast[index] = src_cast[index];
-		index--;
+		dest[len - 1] = src[len - 1];
+		len--;
 	}
 	return (dest);
 }
 
-void *ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-    if (dest < src && dest + len > src)
-        ft_memrcpy(dest, src);
-    else
-        ft_memcpy(dest, src, len);     
-    return dest;
+	char	*dest_cast;
+	char	*src_cast;
+
+	dest_cast = (char *)dest;
+	src_cast = (char *)src;
+	if (dest == NULL && src == NULL)
+		return (dest);
+	if (dest > src && dest < src + len)
+		ft_memrcpy(dest_cast, src_cast, len);
+	else
+		ft_memcpy(dest, src, len);
+	return (dest);
 }
 
-int main(void)
-{
-    char *dest = "42Tokyo";
-    const char *src = dest + 3;
+// int main(void)
+// {
+//     char buffer[] = "1234567890";
+//     char *dest = buffer + 4;
+//     const char *src = buffer;
 
-    char *result = ft_memmove(dest, src, 2);
-    printf("dest: %s, src: %s, result: %s\n", dest, src, result);
-    
-    return 0;
-}
+//     printf("dst: %s\n", dest);
+//     printf("src: %s\n", src);
+
+//     ft_memmove(dest, src, 6);
+//     printf("result: %s\n", src);
+
+//     return (0);
+// }
