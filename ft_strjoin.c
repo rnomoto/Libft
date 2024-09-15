@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 22:47:24 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/15 09:27:19 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/15 10:01:30 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     char *result = ft_strjoin(s1, s2);
 //     printf("%s\n", result);
 
-//     return (0);
+//     free(result);
+// 	return (0);
 // }
