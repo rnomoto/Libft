@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:12:31 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 14:35:37 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/18 21:16:12 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	src_cast = (unsigned char *)src;
 	if (dest == NULL && src == NULL)
 		return (dest);
-	if (dest > src && dest < src + len)
+	if (dest_cast > src_cast && dest_cast < src_cast + len)
 		ft_memrcpy(dest_cast, src_cast, len);
 	else
 		ft_memcpy(dest, src, len);
