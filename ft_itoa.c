@@ -6,13 +6,13 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:22:58 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/18 23:16:49 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/18 23:21:15 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count(int n)
+size_t	count_digit(int n)
 {
 	size_t	result;
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 		sign = 1;
 		n *= -1;
 	}
-	digit = sign + count(n);
+	digit = sign + count_digit(n);
 	result = (char *)ft_calloc(sizeof(char), digit + 1);
 	if (result == NULL)
 		return (NULL);
