@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 01:49:55 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/19 02:16:03 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/19 03:49:52 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned	index;
+	unsigned int	index;
 
 	index = 0;
 	while (s[index] != '\0')
