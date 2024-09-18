@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 23:36:17 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/19 00:41:46 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/09/19 02:11:58 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-char	func(unsigned int n, char c)
-{
-	char	result;
+// char	func(unsigned int n, char c)
+// {
+// 	char	result;
 
-	(void)n;
-	result = c;
-	return (result);
-}
+// 	(void)n;
+// 	result = c;
+// 	return (result);
+// }
 
 // int main(void)
 // {
