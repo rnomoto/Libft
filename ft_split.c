@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:49:09 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/18 22:17:39 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/25 08:16:01 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ char	**ft_split(char const *s, char c)
 
 // int main(void)
 // {
-//     char *str = "lorem ipsum dolor sit amet.";
-//     char c = ' ';
+//     char *str = "xxxxxxxxhello!";
+//     char c = 'x';
 //     size_t i = 0;
 
 //     char **result = ft_split(str, c);
