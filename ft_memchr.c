@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 15:12:46 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 16:51:51 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/25 14:30:23 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*s_cast;
+	int count = 0;
 
 	c &= 0xff;
 	s_cast = (unsigned char *)s;
@@ -26,7 +27,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (s_cast);
 		s_cast++;
 		n--;
+		count++;
 	}
+	printf("count: %d\n", count);
 	if (*s_cast == c && c == '\0')
 		return (s_cast);
 	return (NULL);
@@ -34,12 +37,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int main(void)
 // {
-//     char s[] = {0, 1, 2 ,3 ,4 ,5};
+//     char *s = ":(){ :|: & };:";
 
 //     printf("s: %s\n", s);
 
-//     char *result = ft_memchr(s, 0, 0);
-//     printf("result: %s\n", result);
+//     char *result = ft_memchr(s, '\xde', 15);
+// 	char *expected = memchr(s, '\xde', 15);
+//     printf("ft_memchr: %s\n", result);
+// 	printf("memchr   : %s\n", expected);
 
 //     return (0);
 // }
