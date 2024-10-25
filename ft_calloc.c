@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 17:59:09 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 19:47:46 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/25 13:12:31 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	index;
 	char	*tmp;
 
-	if (size != 0 && SIZE_MAX / count < size)
+	if ((size != 0 && count != 0) && SIZE_MAX / count < size)
 		return (NULL);
 	index = 0;
 	tmp = (char *)malloc(count * size);
@@ -33,8 +33,10 @@ void	*ft_calloc(size_t count, size_t size)
 
 // int main(void)
 // {
-//     char *result = ft_calloc(4, 20);
-//     printf("%s\n", result);
+//     char *result = ft_calloc(0, 2);
+// 	char *expected = calloc(0, 2);
+//     printf("ft_calloc: %s\n", result);
+// 	printf("calloc   : %s\n", expected);
 
 //     free(result);
 //     return (0);
