@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:36:00 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/29 19:41:58 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/25 13:49:22 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 	size_t	i;
-
-	dest_len = ft_strlen(dest);
+	
+	if (size == 0 && dest == NULL)
+		dest_len = 0;
+	else
+		dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = 0;
 	if (size <= dest_len)
@@ -40,14 +43,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 // int main(void)
 // {
-//     char dst[] = "pqrstuvwxyz";
+//     //char dst[0xF] = "nyan !";
 //     const char *src = "abcd";
 
-//     printf("dst: %s\n", dst);
-//     printf("src: %s\n", src);
-
-//     size_t result = ft_strlcat(dst, src, 20);
-//     printf("dst_cat: %s output: %zu\n", dst, result);
+// 	size_t expected = strlcat(((void *)0), src, 0);
+//     size_t result = ft_strlcat(((void *)0), src, 0);
+// 	printf("ft_strlcat: %zu\n", result);
+// 	printf("strlcat   : %zu\n", expected);
 
 //     return (0);
 // }
