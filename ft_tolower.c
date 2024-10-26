@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 17:04:35 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/21 13:03:46 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/26 06:21:14 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,133 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-// int main(void)
-// {
-//     int i = 65;
-//     char j = 'A';
-//     int k = 97;
-//     int l = '0';
+/*
+int main(void)
+{
+	int count = 0;
+	int a;
+	int b;
 
-//     printf("input: %d, output: %d\n", i, ft_tolower(i));
-//     printf("input: '%c', output: %c\n", j, ft_tolower(j));
-//     printf("input: %d, output: %d\n", k, ft_tolower(k));
-//     printf("input: '%c', output: %c\n", l, ft_tolower(l));
+	printf("argument: 'A'\n");
+	a = ft_tolower('A');
+	b = tolower('A');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-//     return (0);
-// }
+	printf("argument: 'a'\n");
+	a = ft_tolower('a');
+	b = tolower('a');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: '0'\n");
+	a = ft_tolower('0');
+	b = tolower('0');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: ' '\n");
+	a = ft_tolower(' ');
+	b = tolower(' ');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: '\\'\n");
+	a = ft_tolower('\\');
+	b = tolower('\\');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: '\\0'\n");
+	a = ft_tolower('\0');
+	b = tolower('\0');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: '\\x80'\n");
+	a = ft_tolower('\x80');
+	b = tolower('\x80');
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("argument: EOF\n");
+	a = ft_tolower(EOF);
+	b = tolower(EOF);
+	printf("ft_tolower: %d\n", a);
+	printf("tolower   : %d\n", b);
+	if (a == b)
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+
+	if (count == 0)
+		printf("ALL OK\n");
+	else if (count == 1)
+		printf("1 test failed.\n");
+	else if (count > 1)
+		printf("%d tests failed.\n", count);
+
+	return 0;
+}
+*/
