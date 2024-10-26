@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:02:55 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/01 12:51:41 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/26 11:54:37 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,203 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t				count;
+	size_t				i;
 	const unsigned char	*s1_cast = (const unsigned char *)s1;
 	const unsigned char	*s2_cast = (const unsigned char *)s2;
 
-	count = 0;
-	while ((*s1_cast && *s2_cast) && count < n)
+	i = 0;
+	if (n == 0)
+		return 0;
+	while ((s1_cast[i] && s2_cast[i]) && i < n)
 	{
-		if (*s1_cast != *s2_cast)
-			return (*s1_cast - *s2_cast);
-		s1_cast++;
-		s2_cast++;
-		count++;
+		if (s1_cast[i] != s2_cast[i])
+			return (s1_cast[i] - s2_cast[i]);
+		i++;
 	}
-	if ((*s1_cast == '\0' || *s2_cast == '\0') && (*s1_cast != *s2_cast
-			&& count < n))
-		return (*s1_cast - *s2_cast);
+	if ((s1_cast[i] == '\0' || s2_cast[i] == '\0') && i < n)
+		return (s1_cast[i] - s2_cast[i]);
 	return (0);
 }
 
-// int main(void)
-// {
-//     char *s1 = "\200";
-//     char *s2 = "\0";
-//     size_t i = 1;
-//     size_t j = 0;
-//     size_t k = 6;
+/*
+int main(void)
+{
+	int count = 0;
+	int a;
+	int b;
+	
+	printf("arg1: \"Hello World!\" arg2: \"Hello World!\"\n");
+	printf("arg3: 20\n");
+	a = ft_strncmp("Hello World!", "Hello World!", 20);
+	b = strncmp("Hello World!", "Hello World!", 20);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-// 	int res1 = ft_strncmp(s1, s2, i);
-//     printf("mine s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, i, res1);
-// 	int ans1 = strncmp(s1, s2, i);
-// 	printf("answ s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, i, ans1);
+	printf("arg1: \"Hello World!\" arg2: \"Hello World!\"\n");
+	printf("arg3: 12\n");
+	a = ft_strncmp("Hello World!", "Hello World!", 12);
+	b = strncmp("Hello World!", "Hello World!", 12);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-// 	int res2 = ft_strncmp(s1, s2, j);
-//     printf("mine s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, j, res2);
-// 	int ans2 = strncmp(s1, s2, j);
-// 	printf("answ s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, j, ans2);
+	printf("arg1: \"Hello World!\" arg2: \"Hello World!\"\n");
+	printf("arg3: 5\n");
+	a = ft_strncmp("Hello World!", "Hello World!", 5);
+	b = strncmp("Hello World!", "Hello World!", 5);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-// 	int res3 = ft_strncmp(s1, s2, k);
-//     printf("mine s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, k, res3);
-// 	int ans3 = strncmp(s1, s2, k);
-// 	printf("answ s1: %s, s2: %s, num: %zu, return: %d\n", s1, s2, k, ans3);
+	printf("arg1: \"Hello World!\" arg2: \"Hello WoRld!\"\n");
+	printf("arg3: 20\n");
+	a = ft_strncmp("Hello World!", "Hello WoRld!", 20);
+	b = strncmp("Hello World!", "Hello WoRld!", 20);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-//     return (0);
-// }
+	printf("arg1: \"Hello World!\" arg2: \"Hello WoRld!\"\n");
+	printf("arg3: 5\n");
+	a = ft_strncmp("Hello World!", "Hello WoRld!", 5);
+	b = strncmp("Hello World!", "Hello WoRld!", 5);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"Hello World!\" arg2: \"Hello WoRld!\"\n");
+	printf("arg3: 0\n");
+	a = ft_strncmp("Hello World!", "Hello WoRld!", 0);
+	b = strncmp("Hello World!", "Hello WoRld!", 0);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"Hello\\0World!\" arg2: \"Hello\\0WoRld!\"\n");
+	printf("arg3: 20\n");
+	a = ft_strncmp("Hello\0World!", "Hello WoRld!", 20);
+	b = strncmp("Hello\0World!", "Hello WoRld!", 20);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"Hello World!\" arg2: \" Hello World!\"\n");
+	printf("arg3: 20\n");
+	a = ft_strncmp("Hello World!", " Hello World!", 20);
+	b = strncmp("Hello World!", " Hello World!", 20);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"\\x7F\" arg2: \"\\x80\"\n");
+	printf("arg3: 1\n");
+	a = ft_strncmp("\x7F", "\x80", 1);
+	b = strncmp("\x7F", "\x80", 1);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"\\200\" arg2: \"\\0\"\n");
+	printf("arg3: 1\n");
+	a = ft_strncmp("\200", "\0", 1);
+	b = strncmp("\200", "\0", 1);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: NULL arg2: \"Hello World!\"\n");
+	printf("arg3: 0\n");
+	a = ft_strncmp(NULL, "Hello World!", 0);
+	b = strncmp(NULL, "Hello World!", 0);
+	printf("ft_strncmp: %d\n", a);
+	printf("strncmp   : %d\n", b);
+	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+		printf("OK\n");
+	else if (a != b)
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+	
+    if (count == 0)
+		printf("ALL OK\n");
+	else if (count == 1)
+		printf("1 test failed.\n");
+	else if (count > 1)
+		printf("%d tests failed.\n", count);
+
+	return 0;
+}
+*/

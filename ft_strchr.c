@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:30:43 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/08/30 11:53:22 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/26 12:14:46 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *str, int c)
 
 	index = 0;
 	c_cast = (char)c;
-	while (str[index] != '\0')
+	while (str[index])
 	{
 		if (str[index] == c_cast)
 		{
@@ -32,14 +32,104 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-// int main(void)
-// {
-//     char *input = "teste";
-//     int i = 'e' + 256;
-//     char j = '\0';
+/*
+int main(void)
+{
+	int count = 0;
+	char *a;
+	char *b;
+	
+	printf("arg1: \"Hello World!\" arg2: 'o'\n");
+	a = ft_strchr("Hello World!", 'o');
+	b = strchr("Hello World!", 'o');
+	printf("ft_strchr: %s\n", a);
+	printf("strchr   : %s\n", b);
+	if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+		printf("OK\n");
+	else
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-//     printf("input: %c, output: %s\n", i, ft_strchr(input, i));
-//     printf("input: %c, output: %s\n", j, ft_strchr(input, j));
+	printf("arg1: \"Hello World!\" arg2: '1'\n");
+	a = ft_strchr("Hello World!", '1');
+	b = strchr("Hello World!", '1');
+	printf("ft_strchr: %s\n", a);
+	printf("strchr   : %s\n", b);
+	if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+		printf("OK\n");
+	else
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
 
-//     return (0);
-// }
+	printf("arg1: \"Hello World!\" arg2: '\\0'\n");
+	a = ft_strchr("Hello World!", '\0');
+	b = strchr("Hello World!", '\0');
+	printf("ft_strchr: %s\n", a);
+	printf("strchr   : %s\n", b);
+	if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+		printf("OK\n");
+	else
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"\" arg2: '1'\n");
+	a = ft_strchr("", '1');
+	b = strchr("", '1');
+	printf("ft_strchr: %s\n", a);
+	printf("strchr   : %s\n", b);
+	if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+		printf("OK\n");
+	else
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	printf("arg1: \"Hello\\nWorld!\" arg2: '\\n'\n");
+	a = ft_strchr("Hello\nWorld!", '\n');
+	b = strchr("Hello\nWorld!", '\n');
+	printf("ft_strchr: %s\n", a);
+	printf("strchr   : %s\n", b);
+	if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+		printf("OK\n");
+	else
+	{
+		printf("KO\n");
+		count++;
+	}
+	printf("\n");
+
+	// printf("arg1: NULL arg2: '1'\n");
+	// a = ft_strchr(NULL, '1');
+	// b = strchr(NULL, '1');
+	// printf("ft_strchr: %s\n", a);
+	// printf("strchr   : %s\n", b);
+	// if ((a == NULL && b == NULL) || strcmp(a, b) == 0)
+	// 	printf("OK\n");
+	// else
+	// {
+	// 	printf("KO\n");
+	// 	count++;
+	// }
+	// printf("\n");
+	
+    if (count == 0)
+		printf("ALL OK\n");
+	else if (count == 1)
+		printf("1 test failed.\n");
+	else if (count > 1)
+		printf("%d tests failed.\n", count);
+
+	return 0;
+}
+*/
