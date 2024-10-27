@@ -12,7 +12,7 @@ int isalnum_test(void)
 	b = isalnum('a');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -26,7 +26,7 @@ int isalnum_test(void)
 	b = isalnum('A');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -40,7 +40,7 @@ int isalnum_test(void)
 	b = isalnum('0');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -54,7 +54,7 @@ int isalnum_test(void)
 	b = isalnum(' ');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -68,7 +68,7 @@ int isalnum_test(void)
 	b = isalnum('\\');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -82,7 +82,7 @@ int isalnum_test(void)
 	b = isalnum('\0');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -96,7 +96,7 @@ int isalnum_test(void)
 	b = isalnum('\x80');
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
@@ -110,7 +110,7 @@ int isalnum_test(void)
 	b = isalnum(EOF);
 	printf("ft_isalnum: %d\n", a);
 	printf("isalnum   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
 	else if (a != b)
 	{
