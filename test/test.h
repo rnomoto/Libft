@@ -19,4 +19,11 @@ int strnstr_test(void);
 int strlcpy_test(void);
 int strlcat_test(void);
 
+int memset_test(void);
+int bzero_test(void);
+int memcpy_test(void);
+int memmove_test(void);
+int memchr_test(void);
+int memcmp_test(void);
+
 #endif

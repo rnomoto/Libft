@@ -145,6 +145,66 @@ int main(void)
         count++;
     }
 
+    //memset
+    printf("\x1b[1mft_memset\x1b[0m\n");
+    if (memset_test() == 0)
+        printf("\x1b[32mmemset: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mmemset: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //bzero
+    printf("\x1b[1mft_bzero\x1b[0m\n");
+    if (bzero_test() == 0)
+        printf("\x1b[32mbzero: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mbzero: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //memcpy
+    printf("\x1b[1mft_memcpy\x1b[0m\n");
+    if (memcpy_test() == 0)
+        printf("\x1b[32mmemcpy: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mmemcpy: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //memmove
+    printf("\x1b[1mft_memmove\x1b[0m\n");
+    if (memmove_test() == 0)
+        printf("\x1b[32mmemmove: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mmemmove: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //memchr
+    printf("\x1b[1mft_memchr\x1b[0m\n");
+    if (memchr_test() == 0)
+        printf("\x1b[32mmemchr: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mmemchr: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //memcmp
+    printf("\x1b[1mft_memcmp\x1b[0m\n");
+    if (memcmp_test() == 0)
+        printf("\x1b[32mmemcmp: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mmemcmp: KO\x1b[0m\n\n");
+        count++;
+    }
+
 
     //ALL
     if (count == 0)
