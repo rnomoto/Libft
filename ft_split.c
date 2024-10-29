@@ -6,13 +6,13 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:49:09 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/10/29 13:42:42 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/29 16:58:40 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	str_count(char const *str, char c)
+size_t	arr_count(char const *str, char c)
 {
 	size_t	count;
 	size_t	flag;
@@ -33,7 +33,7 @@ size_t	str_count(char const *str, char c)
 	return (count);
 }
 
-size_t	substr_count(char const *str, char c)
+size_t	arr_len(char const *str, char c)
 {
 	size_t	count;
 
@@ -46,58 +46,46 @@ size_t	substr_count(char const *str, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+void	split_free(char **array, size_t n)
 {
-	char	**result;
-	size_t	arr_i;
-	size_t	str_i;
-	size_t i;
+	size_t	index;
 
-	arr_i = 0;
-	str_i = 0;
-	i = 0;
-	result = (char **)ft_calloc(sizeof(char *), str_count(s, c) + 1);
-	if (result == NULL)
+	index = 0;
+	while (index <= n)
 	{
-		return (NULL);
+		free(array[index]);
+		index++;
 	}
-	while (s[str_i] != '\0')
-	{
-		while (s[str_i] == c)
-			str_i++;
-		if (s[str_i] == '\0')
-			break ;
-		result[arr_i] = (char *)ft_calloc(sizeof(char), (substr_count(s + str_i,
-						c) + 1));
-		if (result[arr_i] == NULL)
-		{
-			while(i <= arr_i)
-			{
-				free(result[i]);
-				i++;
-			}
-			free(result);
-			return (NULL);
-		}
-		ft_strlcpy(result[arr_i], s + str_i, substr_count(s + str_i, c) + 1);
-		str_i += substr_count(s + str_i, c);
-		arr_i++;
-	}
-	result[arr_i] = NULL;
-	return (result);
+	free(array);
 }
 
-// int main(void)
-// {
-//     char *str = "xxxxxxxxhello!";
-//     char c = 'x';
-//     size_t i = 0;
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	i;
+	size_t	j;
 
-//     char **result = ft_split(str, c);
-//     while (result[i] != NULL)
-//     {
-//         printf("%s\n", result[i]);
-//         i++;
-//     }
-//     return (0);
-// }
+	i = 0;
+	j = 0;
+	res = (char **)ft_calloc(sizeof(char *), arr_count(s, c) + 1);
+	if (res == NULL)
+		return (NULL);
+	while (s[j])
+	{
+		while (s[j] == c)
+			j++;
+		if (s[j] == '\0')
+			break ;
+		res[i] = (char *)ft_calloc(sizeof(char), (arr_len(s + j, c) + 1));
+		if (res[i] == NULL)
+		{
+			split_free(res, i);
+			return (NULL);
+		}
+		ft_strlcpy(res[i], s + j, arr_len(s + j, c) + 1);
+		j += arr_len(s + j, c);
+		i++;
+	}
+	res[i] = NULL;
+	return (res);
+}
