@@ -26,4 +26,8 @@ int memmove_test(void);
 int memchr_test(void);
 int memcmp_test(void);
 
+int atoi_test(void);
+int calloc_test(void);
+int strdup_test(void);
+
 #endif

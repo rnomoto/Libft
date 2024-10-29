@@ -205,6 +205,36 @@ int main(void)
         count++;
     }
 
+    //atoi
+    printf("\x1b[1mft_atoi\x1b[0m\n");
+    if (atoi_test() == 0)
+        printf("\x1b[32matoi: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31matoi: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //calloc
+    printf("\x1b[1mft_calloc\x1b[0m\n");
+    if (calloc_test() == 0)
+        printf("\x1b[32mcalloc: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mcalloc: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //strdup
+    printf("\x1b[1mft_strdup\x1b[0m\n");
+    if (strdup_test() == 0)
+        printf("\x1b[32mstrdup: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mstrdup: KO\x1b[0m\n\n");
+        count++;
+    }
+
 
     //ALL
     if (count == 0)
