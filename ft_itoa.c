@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:22:58 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/18 23:21:15 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/30 05:59:41 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,3 @@ char	*ft_itoa(int n)
 	put_reverse(result, n, sign, digit);
 	return (result);
 }
-
-// int main(void)
-// {
-//     int n = -2147483648;
-
-//     char *result = ft_itoa(n);
-//     printf("input : %d\n", n);
-//     printf("output: %s\n", result);
-
-//     free(result);
-//     return (0);
-// }

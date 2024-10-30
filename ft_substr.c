@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 20:18:26 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/14 22:36:16 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:32:01 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	index;
+	size_t	i;
 	char	*tmp;
 
-	index = 0;
+	i = 0;
 	if (s == NULL || ft_strlen(s) <= start)
 		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
@@ -25,19 +25,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	tmp = (char *)ft_calloc(sizeof(char), len + 1);
 	if (tmp == NULL)
 		return (NULL);
-	while (index < len && s[start + index] != '\0')
+	while (i < len && s[start + i] != '\0')
 	{
-		tmp[index] = s[start + index];
-		index++;
+		tmp[i] = s[start + i];
+		i++;
 	}
 	return (tmp);
 }
-
-// int main(void)
-// {
-//     char *result = ft_substr("", 1, 1);
-//     printf("%s\n", result);
-
-//     free(result);
-//     return (0);
-// }

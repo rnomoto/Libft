@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 09:32:58 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/18 19:55:47 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/29 12:20:30 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcat(s2, s1 + start, len + 1);
 	return (s2);
 }
-
-// int main(void)
-// {
-//     char str[] = "1234A2AA22331122";
-//     char *set = "1234";
-
-//     char *result = ft_strtrim(str, set);
-//     printf("%s\n", result);
-
-//     free(result);
-//     return (0);
-// }

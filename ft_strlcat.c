@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:36:00 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/10/27 14:29:22 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/29 17:09:12 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 	size_t	i;
-	
+
 	if (size == 0 && dest == NULL)
 		dest_len = 0;
 	else

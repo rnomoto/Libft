@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 23:36:17 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/19 02:11:58 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/30 06:36:16 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result = (char *)ft_calloc(sizeof(char), ft_strlen(s) + 1);
 	if (result == NULL)
 		return (NULL);
-	while (s[index] != '\0')
+	while (s[index])
 	{
 		result[index] = f(index, s[index]);
 		index++;
 	}
 	return (result);
 }
-
-// char	func(unsigned int n, char c)
-// {
-// 	char	result;
-
-// 	(void)n;
-// 	result = c;
-// 	return (result);
-// }
-
-// int main(void)
-// {
-// 	char *s = "AAAAAAAAAA";
-// 	char (*f)(unsigned int, char);
-
-// 	f = func;
-// 	char *result = ft_strmapi(s, f);
-// 	printf("%s\n", s);
-// 	printf("%s\n", result);
-
-// 	return (0);
-// }
