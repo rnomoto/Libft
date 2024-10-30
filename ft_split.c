@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:49:09 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/10/29 16:58:40 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/29 17:07:25 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ size_t	arr_len(char const *str, char c)
 	return (count);
 }
 
-void	split_free(char **array, size_t n)
+void	*split_free(char **array, size_t n)
 {
 	size_t	index;
 
@@ -57,6 +57,7 @@ void	split_free(char **array, size_t n)
 		index++;
 	}
 	free(array);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,10 +79,7 @@ char	**ft_split(char const *s, char c)
 			break ;
 		res[i] = (char *)ft_calloc(sizeof(char), (arr_len(s + j, c) + 1));
 		if (res[i] == NULL)
-		{
-			split_free(res, i);
-			return (NULL);
-		}
+			return (split_free(res, i));
 		ft_strlcpy(res[i], s + j, arr_len(s + j, c) + 1);
 		j += arr_len(s + j, c);
 		i++;
