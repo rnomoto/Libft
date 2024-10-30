@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 03:25:17 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/09/19 03:45:12 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:00:31 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
-
-// int main(void)
-// {
-//     int n = 12345;
-//     int fd = 1;
-//     ft_putnbr_fd(n, fd);
-
-//     return (0);
-// }
