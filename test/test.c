@@ -315,6 +315,26 @@ int main(void)
         count++;
     }
 
+    //putstr_fd
+    printf("\x1b[1mft_putstr_fd\x1b[0m\n");
+    if (putstr_fd_test() == 0)
+        printf("\x1b[32mputstr_fd: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mputstr_fd: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //putendl_fd
+    printf("\x1b[1mft_putendl_fd\x1b[0m\n");
+    if (putendl_fd_test() == 0)
+        printf("\x1b[32mputendl_fd: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mputendl_fd: KO\x1b[0m\n\n");
+        count++;
+    }
+
 
     //ALL
     if (count == 0)

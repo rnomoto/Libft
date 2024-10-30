@@ -40,5 +40,7 @@ int strmapi_test(void);
 int striteri_test(void);
 
 int putchar_fd_test(void);
+int putstr_fd_test(void);
+int putendl_fd_test(void);
 
 #endif
