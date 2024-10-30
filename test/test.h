@@ -2,6 +2,7 @@
 #define TEST_H
 
 #include "../libft.h"
+#include <fcntl.h>
 
 int isalpha_test(void);
 int isdigit_test(void);
@@ -29,5 +30,15 @@ int memcmp_test(void);
 int atoi_test(void);
 int calloc_test(void);
 int strdup_test(void);
+
+int substr_test(void);
+int strjoin_test(void);
+int strtrim_test(void);
+int split_test(void);
+int itoa_test(void);
+int strmapi_test(void);
+int striteri_test(void);
+
+int putchar_fd_test(void);
 
 #endif

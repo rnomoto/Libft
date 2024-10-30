@@ -235,6 +235,86 @@ int main(void)
         count++;
     }
 
+    //substr
+    printf("\x1b[1mft_substr\x1b[0m\n");
+    if (substr_test() == 0)
+        printf("\x1b[32msubstr: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31msubstr: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //strjoin
+    printf("\x1b[1mft_strjoin\x1b[0m\n");
+    if (strjoin_test() == 0)
+        printf("\x1b[32mstrjoin: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mstrjoin: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //strtrim
+    printf("\x1b[1mft_strtrim\x1b[0m\n");
+    if (strtrim_test() == 0)
+        printf("\x1b[32mstrtrim: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mstrtrim: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //split
+    printf("\x1b[1mft_split\x1b[0m\n");
+    if (split_test() == 0)
+        printf("\x1b[32msplit: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31msplit: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //itoa
+    printf("\x1b[1mft_itoa\x1b[0m\n");
+    if (itoa_test() == 0)
+        printf("\x1b[32mitoa: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mitoa: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //strmapi
+    printf("\x1b[1mft_strmapi\x1b[0m\n");
+    if (strmapi_test() == 0)
+        printf("\x1b[32mstrmapi: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mstrmapi: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //striteri
+    printf("\x1b[1mft_striteri\x1b[0m\n");
+    if (striteri_test() == 0)
+        printf("\x1b[32mstriteri: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mstriteri: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //putchar_fd
+    printf("\x1b[1mft_putchar_fd\x1b[0m\n");
+    if (putchar_fd_test() == 0)
+        printf("\x1b[32mputchar_fd: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mputchar_fd: KO\x1b[0m\n\n");
+        count++;
+    }
+
 
     //ALL
     if (count == 0)
