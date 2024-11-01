@@ -29,11 +29,12 @@ int putnbr_fd_test(void)
     else
     {
         ft_putnbr_fd(nbr, fd);
+        ft_putchar_fd('\0', fd);
         lseek(fd, 0, SEEK_SET);
         read(fd, buf, 20);
         printf("ft_putnbr_fd: %s\n", buf);
         printf("    expected: -12345\n");
-        if (strncmp(buf, "-12345", 6))
+        if (strcmp(buf, "-12345") == 0)
             printf("OK\n");
         else
         {
