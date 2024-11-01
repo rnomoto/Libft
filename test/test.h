@@ -42,5 +42,18 @@ int striteri_test(void);
 int putchar_fd_test(void);
 int putstr_fd_test(void);
 int putendl_fd_test(void);
+int putnbr_fd_test(void);
+
+int lstnew_test(void);
+int lstadd_front_test(void);
+int lstsize_test(void);
+int lstlast_test(void);
+int lstadd_back_test(void);
+int lstdelone_test(void);
+int lstclear_test(void);
+int lstiter_test(void);
+int lstmap_test(void);
+
+void del(void *ptr);
 
 #endif

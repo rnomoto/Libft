@@ -335,6 +335,105 @@ int main(void)
         count++;
     }
 
+    //putnbr_fd
+    printf("\x1b[1mft_putnbr_fd\x1b[0m\n");
+    if (putnbr_fd_test() == 0)
+        printf("\x1b[32mputnbr_fd: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mputnbr_fd: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstnew
+    printf("\x1b[1mft_lstnew\x1b[0m\n");
+    if (lstnew_test() == 0)
+        printf("\x1b[32mlstnew: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstnew: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstadd_front
+    printf("\x1b[1mft_lstadd_front\x1b[0m\n");
+    if (lstadd_front_test() == 0)
+        printf("\x1b[32mlstadd_front: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstadd_front: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstsize
+    printf("\x1b[1mft_lstsize\x1b[0m\n");
+    if (lstsize_test() == 0)
+        printf("\x1b[32mlstsize: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstsize: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstlast
+    printf("\x1b[1mft_lstlast\x1b[0m\n");
+    if (lstlast_test() == 0)
+        printf("\x1b[32mlstlast: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstlast: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstadd_back
+    printf("\x1b[1mft_lstadd_back\x1b[0m\n");
+    if (lstadd_back_test() == 0)
+        printf("\x1b[32mlstadd_back: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstadd_back: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstdelone
+    printf("\x1b[1mft_lstdelone\x1b[0m\n");
+    if (lstdelone_test() == 0)
+        printf("\x1b[32mlstdelone: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstdelone: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstclear
+    printf("\x1b[1mft_lstclear\x1b[0m\n");
+    if (lstclear_test() == 0)
+        printf("\x1b[32mlstclear: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstclear: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstiter
+    printf("\x1b[1mft_lstiter\x1b[0m\n");
+    if (lstiter_test() == 0)
+        printf("\x1b[32mlstiter: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstiter: KO\x1b[0m\n\n");
+        count++;
+    }
+
+    //lstmap
+    printf("\x1b[1mft_lstmap\x1b[0m\n");
+    if (lstmap_test() == 0)
+        printf("\x1b[32mlstmap: OK\x1b[0m\n\n");
+    else
+    {
+        printf("\x1b[31mlstmap: KO\x1b[0m\n\n");
+        count++;
+    }
 
     //ALL
     if (count == 0)
