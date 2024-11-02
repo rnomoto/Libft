@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if ((size != 0 && count != 0) && SIZE_MAX / count < size)
 		return (NULL);
+	else if (size == 0 || count == 0)
+		count = 1;
 	index = 0;
 	tmp = (char *)malloc(count * size);
 	if (tmp == NULL)
@@ -28,5 +30,5 @@ void	*ft_calloc(size_t count, size_t size)
 		tmp[index] = 0;
 		index++;
 	}
-	return (tmp);
+	return ((void*)tmp);
 }

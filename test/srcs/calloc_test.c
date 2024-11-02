@@ -30,7 +30,7 @@ int calloc_test(void)
     printf("   calloc: %s\n", mem_lb);
     if (mem_ft == NULL && mem_lb == NULL)
         printf("OK\n");
-    else if (strncmp(mem_ft, mem_lb, 10) == 0)
+    else if (strncmp(mem_ft, mem_lb, 10) == 0 || strcmp(mem_ft, mem_lb) == 0)
         printf("OK\n");
     else
     {
