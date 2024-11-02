@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 15:12:46 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/10/29 07:57:26 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/11/02 16:49:29 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		s_cast++;
 		n--;
 	}
-	if (*s_cast == c_cast && c_cast == '\0')
-		return (s_cast);
+	// if (*s_cast == c_cast && c_cast == '\0')
+	// 	return (s_cast);
+	//You must not add the behavior above.
+	//It search one more character when the second argument 'int c' is '\0'. 
 	return (NULL);
 }
