@@ -6,7 +6,7 @@
 /*   By: rnomoto <rnomoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 17:59:09 by rnomoto           #+#    #+#             */
-/*   Updated: 2024/10/29 10:17:25 by rnomoto          ###   ########.fr       */
+/*   Updated: 2024/11/02 09:54:45 by rnomoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	*ft_calloc(size_t count, size_t size)
 		tmp[index] = 0;
 		index++;
 	}
-	return ((void*)tmp);
+	return (tmp);
 }
