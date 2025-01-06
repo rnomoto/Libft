@@ -92,7 +92,7 @@ int toupper_test(void)
 	printf("\n");
 
 	printf("argument: '\\x80'\n");
-	a = ft_toupper('\x80');
+	a = ft_toupper((unsigned char)'\x80');
 	b = toupper('\x80');
 	printf("ft_toupper: %d\n", a);
 	printf("toupper   : %d\n", b);

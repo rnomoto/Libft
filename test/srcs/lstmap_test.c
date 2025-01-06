@@ -19,15 +19,15 @@ int lstmap_test(void)
 
     t_list *list = NULL;
     char *str1 = (char *)malloc(20 * sizeof(char));
-    strlcpy(str1, "1234567890", 20);
+    ft_strlcpy(str1, "1234567890", 20);
     t_list *node1 = ft_lstnew(str1);
     ft_lstadd_back(&list, node1);
     char *str2 = (char *)malloc(20 * sizeof(char));
-    strlcpy(str2, "abcdefghij", 20);
+    ft_strlcpy(str2, "abcdefghij", 20);
     t_list *node2 = ft_lstnew(str2);
     ft_lstadd_back(&list, node2);
     char *str3 = (char *)malloc(20 * sizeof(char));
-    strlcpy(str3, "ABCDEFGHIJ", 20);
+    ft_strlcpy(str3, "ABCDEFGHIJ", 20);
     t_list *node3 = ft_lstnew(str3);
     ft_lstadd_back(&list, node3);
     printf("      arg: %s -> %s -> %s\n", (unsigned char *)list->content, (unsigned char *)list->next->content, (unsigned char *)list->next->next->content);

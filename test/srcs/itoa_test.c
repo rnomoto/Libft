@@ -8,7 +8,7 @@ int itoa_test(void)
     int n = 12345;
     printf("arg: %d\n", n);
     char *exp = (char *)malloc(20 * sizeof(char));
-    strlcpy(exp, "12345", 20);
+    ft_strlcpy(exp, "12345", 20);
     char *ans = ft_itoa(n);
     printf(" ft_itoa: %s\n", ans);
     printf("expected: %s\n", exp);
@@ -26,7 +26,7 @@ int itoa_test(void)
     n = -12345;
     printf("arg: %d\n", n);
     exp = (char *)malloc(20 * sizeof(char));
-    strlcpy(exp, "-12345", 20);
+    ft_strlcpy(exp, "-12345", 20);
     ans = ft_itoa(n);
     printf(" ft_itoa: %s\n", ans);
     printf("expected: %s\n", exp);
@@ -44,7 +44,7 @@ int itoa_test(void)
     n = -2147483648;
     printf("arg: %d\n", n);
     exp = (char *)malloc(20 * sizeof(char));
-    strlcpy(exp, "-2147483648", 20);
+    ft_strlcpy(exp, "-2147483648", 20);
     ans = ft_itoa(n);
     printf(" ft_itoa: %s\n", ans);
     printf("expected: %s\n", exp);

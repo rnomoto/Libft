@@ -6,6 +6,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupp
 BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJS = $(SRCS:%.c=%.o)
 BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)
+.BONUS = .bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -14,11 +15,14 @@ $(NAME):$(OBJS)
 
 all: $(NAME)
 
-bonus: $(NAME) $(BONUS_OBJS)
+bonus: $(NAME) $(.BONUS)
+
+.bonus: $(BONUS_OBJS)
 	ar rc $(NAME) $(BONUS_OBJS)
+	touch $(.BONUS)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) $(.BONUS)
 
 fclean: clean
 	rm -f $(NAME)

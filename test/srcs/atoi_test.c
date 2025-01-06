@@ -6,7 +6,7 @@ int atoi_test(void)
     int count = 0;
 
     char *tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "0123456789", 20);
+    ft_strlcpy(tmp, "0123456789", 20);
     printf("str: %s\n", tmp);
     int ft = ft_atoi(tmp);
     int ld = atoi(tmp);
@@ -23,7 +23,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "-12345", 20);
+    ft_strlcpy(tmp, "-12345", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -40,7 +40,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "-2147483648", 20);
+    ft_strlcpy(tmp, "-2147483648", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -57,7 +57,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "-2147483649", 20);
+    ft_strlcpy(tmp, "-2147483649", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -74,7 +74,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "", 20);
+    ft_strlcpy(tmp, "", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -91,7 +91,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "+-++12345", 20);
+    ft_strlcpy(tmp, "+-++12345", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -108,7 +108,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "3.1415", 20);
+    ft_strlcpy(tmp, "3.1415", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -125,7 +125,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "0x1A", 20);
+    ft_strlcpy(tmp, "0x1A", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -142,7 +142,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "9223372036854775807", 20);
+    ft_strlcpy(tmp, "9223372036854775807", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -159,7 +159,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(20 * sizeof(char));
-    strlcpy(tmp, "9223372036854775808", 20);
+    ft_strlcpy(tmp, "9223372036854775808", 20);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -176,7 +176,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(21 * sizeof(char));
-    strlcpy(tmp, "-9223372036854775808", 21);
+    ft_strlcpy(tmp, "-9223372036854775808", 21);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -193,7 +193,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(21 * sizeof(char));
-    strlcpy(tmp, "-9223372036854775810", 21);
+    ft_strlcpy(tmp, "-9223372036854775810", 21);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);
@@ -210,7 +210,7 @@ int atoi_test(void)
     printf("\n");
 
     tmp = (char *)malloc(21 * sizeof(char));
-    strlcpy(tmp, "18446744073709551615", 21);
+    ft_strlcpy(tmp, "18446744073709551615", 21);
     printf("str: %s\n", tmp);
     ft = ft_atoi(tmp);
     ld = atoi(tmp);

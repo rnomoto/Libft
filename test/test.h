@@ -3,6 +3,8 @@
 
 #include "../libft.h"
 #include <fcntl.h>
+#include <bsd/string.h>
+#include <sys/stat.h>
 
 int isalpha_test(void);
 int isdigit_test(void);
@@ -55,5 +57,6 @@ int lstiter_test(void);
 int lstmap_test(void);
 
 void del(void *ptr);
+size_t	strlcpy(char *dst, const char *src, size_t size);
 
 #endif

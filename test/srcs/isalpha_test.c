@@ -12,9 +12,9 @@ int isalpha_test(void)
 	b = isalpha('a');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -26,9 +26,9 @@ int isalpha_test(void)
 	b = isalpha('A');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -40,9 +40,9 @@ int isalpha_test(void)
 	b = isalpha('0');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -54,9 +54,9 @@ int isalpha_test(void)
 	b = isalpha(' ');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -68,9 +68,9 @@ int isalpha_test(void)
 	b = isalpha('\\');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -82,9 +82,9 @@ int isalpha_test(void)
 	b = isalpha('\0');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -96,9 +96,9 @@ int isalpha_test(void)
 	b = isalpha('\x80');
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -110,9 +110,9 @@ int isalpha_test(void)
 	b = isalpha(EOF);
 	printf("ft_isalpha: %d\n", a);
 	printf("isalpha   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;

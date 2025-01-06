@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	count_digit(int n)
+static size_t	count_digit(int n)
 {
 	size_t	result;
 
@@ -25,7 +25,7 @@ size_t	count_digit(int n)
 	return (result);
 }
 
-void	put_reverse(char *memory, int n, size_t sign, size_t digit)
+static void	put_reverse(char *memory, int n, size_t sign, size_t digit)
 {
 	size_t	i;
 

@@ -28,7 +28,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		s_cast++;
 		n--;
 	}
-	if (*s_cast == c_cast && c_cast == '\0')
-		return (s_cast);
 	return (NULL);
 }

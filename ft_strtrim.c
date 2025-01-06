@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	char_judge(char s, char const *set)
+static size_t	char_judge(char s, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ size_t	char_judge(char s, char const *set)
 	return (1);
 }
 
-size_t	substrlen(char const *str, char const *set)
+static size_t	substrlen(char const *str, char const *set)
 {
 	size_t	i;
 	size_t	len;

@@ -92,7 +92,7 @@ int tolower_test(void)
 	printf("\n");
 
 	printf("argument: '\\x80'\n");
-	a = ft_tolower('\x80');
+	a = ft_tolower((unsigned char)'\x80');
 	b = tolower('\x80');
 	printf("ft_tolower: %d\n", a);
 	printf("tolower   : %d\n", b);

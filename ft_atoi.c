@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f'
 		|| c == '\r')
@@ -20,7 +20,7 @@ int	ft_isspace(char c)
 	return (1);
 }
 
-int	ft_isoverflow(long num, int next)
+static int	ft_isoverflow(long num, int next)
 {
 	long	ov_div;
 	long	ov_mod;
@@ -34,7 +34,7 @@ int	ft_isoverflow(long num, int next)
 	return (0);
 }
 
-int	ft_isunderflow(long num, int next)
+static int	ft_isunderflow(long num, int next)
 {
 	long	un_div;
 	long	un_mod;

@@ -24,8 +24,8 @@ int bzero_test(void)
 	printf("mem: 10, size: 1\n");
 	char *mem_ft2 = (char *)malloc(10 * sizeof(char));
 	char *mem_lb2 = (char *)malloc(10 * sizeof(char));
-	strlcpy(mem_ft2, "123456789", 10);
-	strlcpy(mem_lb2, "123456789", 10);
+	ft_strlcpy(mem_ft2, "123456789", 10);
+	ft_strlcpy(mem_lb2, "123456789", 10);
 	ft_bzero(mem_ft2, 1);
 	bzero(mem_lb2, 1);
 	if (strncmp(mem_ft2, mem_lb2, 10) == 0)

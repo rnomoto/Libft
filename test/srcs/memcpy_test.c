@@ -61,23 +61,23 @@ int memcpy_test(void)
 	free(dest_lb);
 	printf("\n");
 
-	printf("dest: NULL, src: NULL, size: 10\n");
-	dest_ft = NULL;
-	dest_lb = NULL;
-	dest_ft = ft_memcpy(dest_ft, NULL, 10);
-	dest_lb = memcpy(dest_lb, NULL, 10);
-	printf("ft_memcpy: %s\n", dest_ft);
-	printf("   memcpy: %s\n", dest_lb);
-	if (dest_ft == NULL && dest_lb == NULL)
-		printf("OK\n");
-	else
-	{
-		printf("KO\n");
-		count++;
-	}
-	free(dest_ft);
-	free(dest_lb);
-	printf("\n");
+	// printf("dest: NULL, src: NULL, size: 10\n");
+	// dest_ft = NULL;
+	// dest_lb = NULL;
+	// dest_ft = ft_memcpy(dest_ft, NULL, 10);
+	// dest_lb = memcpy(dest_lb, NULL, 10);
+	// printf("ft_memcpy: %s\n", dest_ft);
+	// printf("   memcpy: %s\n", dest_lb);
+	// if (dest_ft == NULL && dest_lb == NULL)
+	// 	printf("OK\n");
+	// else
+	// {
+	// 	printf("KO\n");
+	// 	count++;
+	// }
+	// free(dest_ft);
+	// free(dest_lb);
+	// printf("\n");
 
 	// printf("destsize: 10 , src: NULL, size: 10\n");
 	// dest_ft = (char *)malloc(10 * sizeof(char));

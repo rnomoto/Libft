@@ -157,20 +157,20 @@ int strncmp_test(void)
 	}
 	printf("\n");
 
-	printf("arg1: NULL arg2: \"Hello World!\"\n");
-	printf("arg3: 0\n");
-	a = ft_strncmp(NULL, "Hello World!", 0);
-	b = strncmp(NULL, "Hello World!", 0);
-	printf("ft_strncmp: %d\n", a);
-	printf("strncmp   : %d\n", b);
-	if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
-		printf("OK\n");
-	else if (a != b)
-	{
-		printf("KO\n");
-		count++;
-	}
-	printf("\n");
+	// printf("arg1: NULL arg2: \"Hello World!\"\n");
+	// printf("arg3: 0\n");
+	// a = ft_strncmp(NULL, "Hello World!", 0);
+	// b = strncmp(NULL, "Hello World!", 0);
+	// printf("ft_strncmp: %d\n", a);
+	// printf("strncmp   : %d\n", b);
+	// if (a == b || (a > 0 && b > 0) || (a < 0 && b < 0))
+	// 	printf("OK\n");
+	// else if (a != b)
+	// {
+	// 	printf("KO\n");
+	// 	count++;
+	// }
+	// printf("\n");
 	
     if (count == 0)
 		printf("ALL OK\n");

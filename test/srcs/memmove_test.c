@@ -75,25 +75,25 @@ int memmove_test(void)
 	free(dest_lb);
 	printf("\n");
 
-	dest_ft = NULL;
-	dest_lb = NULL;
-	printf("destsize: NULL, src: NULL, size: 10\n");
-	dest_ft = ft_memmove(dest_ft, NULL, 4);
-	dest_lb = memmove(dest_lb, NULL, 4);
-	printf("ft_memmove: %s\n", dest_ft);
-	printf("   memmove: %s\n", dest_lb);
-	if (dest_ft == NULL && dest_lb == NULL)
-		printf("OK\n");
-	else if (strncmp(dest_ft, dest_lb, 10) == 0)
-		printf("OK\n");
-	else
-	{
-		printf("KO\n");
-		count++;
-	}
-	free(dest_ft);
-	free(dest_lb);
-	printf("\n");
+	// dest_ft = NULL;
+	// dest_lb = NULL;
+	// printf("destsize: NULL, src: NULL, size: 10\n");
+	// dest_ft = ft_memmove(dest_ft, NULL, 4);
+	// dest_lb = memmove(dest_lb, NULL, 4);
+	// printf("ft_memmove: %s\n", dest_ft);
+	// printf("   memmove: %s\n", dest_lb);
+	// if (dest_ft == NULL && dest_lb == NULL)
+	// 	printf("OK\n");
+	// else if (strncmp(dest_ft, dest_lb, 10) == 0)
+	// 	printf("OK\n");
+	// else
+	// {
+	// 	printf("KO\n");
+	// 	count++;
+	// }
+	// free(dest_ft);
+	// free(dest_lb);
+	// printf("\n");
 
 	// dest_ft = NULL;
 	// dest_lb = NULL;

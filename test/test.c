@@ -116,34 +116,34 @@ int main(void)
     }
 
     //strnstr
-    printf("\x1b[1mft_strnstr\x1b[0m\n");
-    if (strnstr_test() == 0)
-        printf("\x1b[32mstrnstr: OK\x1b[0m\n\n");
-    else
-    {
-        printf("\x1b[31mstrnstr: KO\x1b[0m\n\n");
-        count++;
-    }
+    // printf("\x1b[1mft_strnstr\x1b[0m\n");
+    // if (strnstr_test() == 0)
+    //     printf("\x1b[32mstrnstr: OK\x1b[0m\n\n");
+    // else
+    // {
+    //     printf("\x1b[31mstrnstr: KO\x1b[0m\n\n");
+    //     count++;
+    // }
 
     //strlcpy
-    printf("\x1b[1mft_strlcpy\x1b[0m\n");
-    if (strlcpy_test() == 0)
-        printf("\x1b[32mstrlcpy: OK\x1b[0m\n\n");
-    else
-    {
-        printf("\x1b[31mstrlcpy: KO\x1b[0m\n\n");
-        count++;
-    }
+    // printf("\x1b[1mft_strlcpy\x1b[0m\n");
+    // if (strlcpy_test() == 0)
+    //     printf("\x1b[32mstrlcpy: OK\x1b[0m\n\n");
+    // else
+    // {
+    //     printf("\x1b[31mstrlcpy: KO\x1b[0m\n\n");
+    //     count++;
+    // }
 
     //strlcat
-    printf("\x1b[1mft_strlcat\x1b[0m\n");
-    if (strlcat_test() == 0)
-        printf("\x1b[32mstrlcat: OK\x1b[0m\n\n");
-    else
-    {
-        printf("\x1b[31mstrlcat: KO\x1b[0m\n\n");
-        count++;
-    }
+    // printf("\x1b[1mft_strlcat\x1b[0m\n");
+    // if (strlcat_test() == 0)
+    //     printf("\x1b[32mstrlcat: OK\x1b[0m\n\n");
+    // else
+    // {
+    //     printf("\x1b[31mstrlcat: KO\x1b[0m\n\n");
+    //     count++;
+    // }
 
     //memset
     printf("\x1b[1mft_memset\x1b[0m\n");

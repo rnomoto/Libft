@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	arr_count(char const *str, char c)
+static size_t	arr_count(char const *str, char c)
 {
 	size_t	count;
 	size_t	flag;
@@ -33,7 +33,7 @@ size_t	arr_count(char const *str, char c)
 	return (count);
 }
 
-size_t	arr_len(char const *str, char c)
+static size_t	arr_len(char const *str, char c)
 {
 	size_t	count;
 
@@ -46,7 +46,7 @@ size_t	arr_len(char const *str, char c)
 	return (count);
 }
 
-void	*split_free(char **array, size_t n)
+static void	*split_free(char **array, size_t n)
 {
 	size_t	index;
 

@@ -12,9 +12,9 @@ int isprint_test(void)
 	b = isprint('0');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -26,9 +26,9 @@ int isprint_test(void)
 	b = isprint('a');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -40,9 +40,9 @@ int isprint_test(void)
 	b = isprint(' ');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -54,9 +54,9 @@ int isprint_test(void)
 	b = isprint('\n');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -68,9 +68,9 @@ int isprint_test(void)
 	b = isprint('\0');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -78,13 +78,13 @@ int isprint_test(void)
 	printf("\n");
 
 	printf("argument: '\\x80'\n");
-	a = ft_isprint('\\x80');
-	b = isprint('\\x80');
+	a = ft_isprint('\x80');
+	b = isprint('\x80');
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;
@@ -96,9 +96,9 @@ int isprint_test(void)
 	b = isprint(EOF);
 	printf("ft_isprint: %d\n", a);
 	printf("isprint   : %d\n", b);
-	if (a == b)
+	if (a == b || (a != 0 && b != 0))
 		printf("OK\n");
-	else if (a != b)
+	else
 	{
 		printf("KO\n");
 		count++;

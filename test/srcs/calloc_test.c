@@ -41,6 +41,42 @@ int calloc_test(void)
     free(mem_lb);
     printf("\n");
 
+    printf("count: 1, sizeof: 0\n");
+    mem_ft = ft_calloc(1, 0);
+    mem_lb = calloc(1, 0);
+    printf("ft_calloc: %s\n", mem_ft);
+    printf("   calloc: %s\n", mem_lb);
+    if (mem_ft == NULL && mem_lb == NULL)
+        printf("OK\n");
+    else if (strncmp(mem_ft, mem_lb, 10) == 0 || strcmp(mem_ft, mem_lb) == 0)
+        printf("OK\n");
+    else
+    {
+        printf("KO\n");
+        count++;
+    }
+    free(mem_ft);
+    free(mem_lb);
+    printf("\n");
+
+    printf("count: 0, sizeof: 0\n");
+    mem_ft = ft_calloc(0, 0);
+    mem_lb = calloc(0, 0);
+    printf("ft_calloc: %s\n", mem_ft);
+    printf("   calloc: %s\n", mem_lb);
+    if (mem_ft == NULL && mem_lb == NULL)
+        printf("OK\n");
+    else if (strncmp(mem_ft, mem_lb, 10) == 0 || strcmp(mem_ft, mem_lb) == 0)
+        printf("OK\n");
+    else
+    {
+        printf("KO\n");
+        count++;
+    }
+    free(mem_ft);
+    free(mem_lb);
+    printf("\n");
+
     if (count == 0)
 		printf("ALL OK\n");
 	else if (count == 1)
